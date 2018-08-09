@@ -94,6 +94,32 @@ html {
 @mixin img {
 
     max-width: 100%;
+
+    padding: 25px;
+    display: inline-block;
+
+    &.alignleft { 
+
+        float: left;
+
+    }
+
+    &.alignright {
+
+        float: right;
+
+    }
+
+    &.aligncenter {
+
+        display: block;
+        margin: auto;
+    }
+
+    &.alignnone {
+
+        display: block;
+    }
 }
 
 //typography for content that is generated with wysiwys editor
