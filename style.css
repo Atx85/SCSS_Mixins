@@ -68,6 +68,17 @@ body ol li {
     color: black;
     font-family: "arial"; }
 body img {
-  max-width: 100%; }
+  max-width: 100%;
+  padding: 25px;
+  display: inline-block; }
+  body img.alignleft {
+    float: left; }
+  body img.alignright {
+    float: right; }
+  body img.aligncenter {
+    display: block;
+    margin: auto; }
+  body img.alignnone {
+    display: block; }
 
 /*# sourceMappingURL=style.css.map */
