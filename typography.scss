@@ -84,7 +84,6 @@ html {
 
     li {
         @include p;
-        color: green;
 
         p {
             @include p;
