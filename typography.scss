@@ -1,0 +1,118 @@
+//vars
+$main_font: 'arial';
+$secondary_font: 'sans-serif';
+$default_font_color: black;
+
+//it is in pixels but don't use px in the end
+//these numbers make the typography responsive
+$body_copy_desktop : 16;
+$body_copy_tablet : 15;
+$body_copy_mobile : 12;
+
+//default body-copy size
+$body_copy: $body_copy_desktop;
+
+html {
+        font-size: $body_copy_mobile+px;
+
+    @media( min-width: 768px ) {
+
+        font-size : $body_copy_tablet+px;  
+    }
+    
+    @media( min-width: 1024px ) {
+
+        font-size : $body_copy_desktop+px;
+    }
+}
+
+//mixin declarations
+@function pixel_to_rem( $val ) {
+
+    $body_copy: $body_copy_mobile;
+
+    //1rem  = html { font-size: 16px }
+    @return ($val / $body_copy)+rem;
+}
+
+@mixin font_base($size, $line_height, $color: $default_font_color, $spacing:0 , $font_family: $main_font) {
+    
+    font-size: pixel_to_rem( $size );
+    line-height: pixel_to_rem( $line_height );
+    margin-bottom: pixel_to_rem( $spacing );
+    color: $color;
+    font-family: $font_family;
+}
+
+//typography starts here
+@mixin h1 {
+    @include font_base(38 , 50 );
+}
+
+@mixin h2 {
+    @include font_base(35 , 45 );
+}
+
+@mixin h3 {
+    @include font_base(30 , 35 );
+}
+
+@mixin h4 {
+    @include font_base(20 , 25 );
+}
+
+@mixin h5 {
+    @include font_base($body_copy , 20 );
+}
+
+@mixin p {
+    @include font_base($body_copy , 20 );
+} 
+
+@mixin ul {
+
+    li {
+        @include p;
+
+        p {
+            @include p;
+        }
+    }
+}
+
+@mixin ol {
+
+    li {
+        @include p;
+        color: green;
+
+        p {
+            @include p;
+        }
+    }
+}
+
+@mixin img {
+
+    max-width: 100%;
+}
+
+//typography for content that is generated with wysiwys editor
+@mixin typography {
+
+    h1 { @include h1;  }
+    h2 { @include h2;  }
+    h3 { @include h3;  }
+    h4 { @include h4;  }  
+    h5 { @include h5;  } 
+    p  { @include p ;  } 
+    ul { @include ul;  }
+    ol { @include ol;  }
+    img{ @include img; }
+    
+
+}
+
+body {
+    @include typography;
+}

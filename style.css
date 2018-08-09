@@ -1,0 +1,74 @@
+html {
+  font-size: 12px; }
+  @media (min-width: 768px) {
+    html {
+      font-size: 15px; } }
+  @media (min-width: 1024px) {
+    html {
+      font-size: 16px; } }
+
+body h1 {
+  font-size: 3.16667rem;
+  line-height: 4.16667rem;
+  margin-bottom: 0rem;
+  color: black;
+  font-family: "arial"; }
+body h2 {
+  font-size: 2.91667rem;
+  line-height: 3.75rem;
+  margin-bottom: 0rem;
+  color: black;
+  font-family: "arial"; }
+body h3 {
+  font-size: 2.5rem;
+  line-height: 2.91667rem;
+  margin-bottom: 0rem;
+  color: black;
+  font-family: "arial"; }
+body h4 {
+  font-size: 1.66667rem;
+  line-height: 2.08333rem;
+  margin-bottom: 0rem;
+  color: black;
+  font-family: "arial"; }
+body h5 {
+  font-size: 1.33333rem;
+  line-height: 1.66667rem;
+  margin-bottom: 0rem;
+  color: black;
+  font-family: "arial"; }
+body p {
+  font-size: 1.33333rem;
+  line-height: 1.66667rem;
+  margin-bottom: 0rem;
+  color: black;
+  font-family: "arial"; }
+body ul li {
+  font-size: 1.33333rem;
+  line-height: 1.66667rem;
+  margin-bottom: 0rem;
+  color: black;
+  font-family: "arial"; }
+  body ul li p {
+    font-size: 1.33333rem;
+    line-height: 1.66667rem;
+    margin-bottom: 0rem;
+    color: black;
+    font-family: "arial"; }
+body ol li {
+  font-size: 1.33333rem;
+  line-height: 1.66667rem;
+  margin-bottom: 0rem;
+  color: black;
+  font-family: "arial";
+  color: green; }
+  body ol li p {
+    font-size: 1.33333rem;
+    line-height: 1.66667rem;
+    margin-bottom: 0rem;
+    color: black;
+    font-family: "arial"; }
+body img {
+  max-width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
